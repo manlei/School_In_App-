@@ -87,11 +87,35 @@
 * 参考资料
 	* [客户端开发平台](https://developer.android.com/index.html)
 	* [服务器端开发平台](https://spring.io/)  
+	* [Android开发规范](http://www.androidchina.net/2141.html)  
+	* [后端java开发规范](http://www.hawstein.com/posts/google-java-style.html)  
 	* [开发者单位](https://cs.nju.edu.cn/)  
 	* [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)
 	* [spring](https://en.wikipedia.org/wiki/Spring_Framework)
 	* [API](https://en.wikipedia.org/wiki/Application_programming_interface)
 
+————————————————————————————————————————————————————————————————————————————————————————
+##  项目研发过过程
+
+  * 需求分析  
+
+  * UI & API 设计  
+
+  * 编码 & 测试  
+
+    * 基于文本的App（60%）  
+
+    * Https/Cookie和通知机制（5%）  
+
+    * 基于富文本的App（25%）  
+
+    * 语音功能（5%）  
+
+    * 界面调整与优化（5%）
+
+  * 上线 & 维护  
+
+—————————————————————————————————————————————————————————————————————————————————————————
 ## 需求分析
 * 整体介绍
   * 该App是一个以`兴趣`和`问题`驱动的知识咨询共享服务平台。
@@ -137,8 +161,104 @@
 	* 问题相似度检索推荐。  
 	
 	* 首页有问题推荐。  
-	
-	
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+## 项目组及成员分工安排
+  
+  * 前端：李聪、满磊、路萍  
+    * 李聪：登录注册页面；个人信息页面(包括好多个子页面，收藏、已提问收藏回答问题等)；团队信息页面；  
+
+    * 满磊：提问(定向、不定向)页面；写文章页面；搜索页面；  
+
+    * 路萍：文章展示页面，包括对文章的评论展示页面；问题页面，包括对问题的评论展示页面；回答展示页面，包括对回答的评论展示页面；  
+
+  * 后端：冯伟赞、朱修羽  
+
+    * 冯伟赞：用户、问题、回答；搜索；富文本；语音  
+
+    * 朱修羽：工作室、文章、评论；通知机制  
+
+  * 文档：全体成员  
+
+    * 路萍、朱修羽：需求文档、设计文档、demo录制  
+
+    * 满磊：工作日志、研发报告、用户手册  
+
+    * 冯伟赞：后端测试计划、后端测试报告、前后端测试报告和计划的整合  
+
+    * 李聪：前端测试计划、前端测试报告、项目报告  
+
+## 关键技术  
+  
+  * 贯穿：git  
+
+  * 设计：PhotoShop，Schetch，RESTful，HTTP  
+
+  * 基于文本的 App ：android 基础，tomcat/spring/hibernate 基础  
+
+  * 通知机制：实现原理  
+
+  * 基于文本的安全 App ：HTTPS/SSL/TSL，IP-Based-Self-Signed-Certificate  
+
+  * 基于富文本的 App ：Glide，HTTP Multipart，Apache Lucene  
+
+  * 基于语音的 App ：android 存储  
+
+## 辅助工具  
+  
+  * 协同开发：git  
+
+  * 设计：PhotoShop，Schetch  
+
+  * 前端：
+
+    * 开发工具：Android Studio 3.1  
+
+    * 辅助类库： Gson; CircleImageView; Glide; ButterKnife; Okhttp3; Retrofit; Otto; BRVAH; JPush; RichEditor; FloatingActionButton; Espresso;  
+
+  * 后端：  
+
+    * 开发工具：IntelliJ IDEA  
+
+    * 辅助类库：spirngframework; commone-fileupload; hibernate; jackson; log4j; jsoup; lucene  
+
+## 统计数据  
+  
+  * 需求功能点：16（详见需求文档）  
+
+  * 文档规模数  
+
+    * 需求文档：15页  
+
+    * 设计文档  
+
+  * 代码行： $ find . -name "*.java" | xargs cat | grep -v ^$ | wc -l   
+
+    * 前端：15k +  
+
+    * 后端：9k +  
+
+## 需求变化&变更  
+
+  * 需求发生变更  
+
+    * 时间  
+      
+      * 我们组正处于API设计完成阶段
+
+    * 应对策略  
+
+      *   校园问答集体需求讨论  
+
+      * 确定会议召开后  
+
+      * 由于相对于我们本来的设计的需求和API来说有所缩小，因此我们也将API缩小  
+
+      * 放到dev分支下，原API在master分支下
+
+
+——————————————————————————————————————————————————————————————————————————————————————————————————————————
+
 ## 软件设计
 详情见设计报告
 
